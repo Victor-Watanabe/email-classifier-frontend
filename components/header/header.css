@@ -1,14 +1,16 @@
-.header {
-  height: 70px;
+.site-header {
   background: white;
-  border-bottom: 1px solid #e5e7eb;
-  display: flex;
-  align-items: center;
-  padding: 0 2rem;
 }
 
-.logo {
+.header-container {
+  margin: 0 auto;
+  padding: 30px 70px;
   font-weight: 700;
-  font-size: 1.5rem;
-  color: #516fad;
+  font-size: 25px;
+  letter-spacing: 0.3px;
+}
+
+.logo-ia {
+  color: var(--primary);
+  font-weight: 800;
 }

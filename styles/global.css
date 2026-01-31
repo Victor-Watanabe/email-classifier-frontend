@@ -1,57 +1,29 @@
-/* Reset básico */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Variáveis globais */
 :root {
-  --color-primary: #5b7cff;
-  --color-bg: #f4f6fb;
-  --color-text: #1f2933;
-  --color-muted: #6b7280;
-  --radius: 12px;
-  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.08);
-  --font-main: "Inter", system-ui, sans-serif;
+  --primary: #f97316; /* LARANJA PRINCIPAL */
+  --bg: #ffffff;
+  --text: #0f172a;
+  --muted: #64748b;
+  --card: #ffffff;
+  --radius: 14px;
+  --shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  --font: "Inter", system-ui, sans-serif;
 }
 
-/* Base do body */
 body {
-  font-family: var(--font-main);
-  color: var(--color-text);
-  min-height: 86vh;
-
-  /* 🎯 Background global da página */
-  background-image: url("/images/bg_emails.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
 }
 
-/* Inputs globais */
-input,
-textarea,
 button {
   font-family: inherit;
-}
-
-/* Botão base */
-button {
-  background: var(--color-primary);
-  color: white;
-  border: none;
-  border-radius: var(--radius);
-  padding: 12px 16px;
   cursor: pointer;
-  transition: 0.2s ease;
-}
-
-button:hover {
-  opacity: 0.9;
-}
-
-/* Helpers */
-.hidden {
-  display: none;
+  border: none;
 }
