@@ -1,0 +1,77 @@
+.home-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 64px 16px;
+  min-height: 86vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Camada de contraste para o card */
+.home-card {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(4px);
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: var(--shadow-soft);
+  width: 100%;
+}
+
+.home-title {
+  margin-bottom: 8px;
+}
+
+.home-subtitle {
+  color: var(--color-muted);
+  margin-bottom: 24px;
+}
+
+.home-field {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.home-field textarea,
+.home-field input[type="file"] {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  font-size: 14px;
+}
+
+.home-button {
+  margin-top: 16px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: none;
+  background: var(--color-primary);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.home-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.divider {
+  text-align: center;
+  margin: 16px 0;
+  color: var(--color-muted);
+  font-weight: 500;
+}
+
+.home-result {
+  margin-top: 24px;
+  background: #f9fafb;
+  border-radius: 10px;
+  padding: 16px;
+  border: 1px solid var(--color-border);
+}

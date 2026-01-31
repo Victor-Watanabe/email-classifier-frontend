@@ -92,6 +92,6 @@ submitBtn.addEventListener("click", async () => {
   } catch (error) {
     console.error(error);
     resultArea.textContent =
-      "❌ Erro ao processar a solicitação.\n\n" + error.message;
+      "❌ Erro ao processar a solicitação. Favor informar a Equipe desenvolvedora!\n\n";
   }
 });

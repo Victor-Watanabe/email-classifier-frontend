@@ -2,44 +2,59 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <title>Classificador de Email</title>
+  <title>Email Classifier</title>
+
+  <link rel="stylesheet" href="styles/global.css" />
+  <link rel="stylesheet" href="styles/homepage.css" />
 </head>
 <body>
 
-  <h1>Email Classifier</h1>
+  <div id="header"></div>
 
-  <!-- Texto do email -->
-  <div>
-    <label for="emailText">Texto do email:</label><br />
-    <textarea
-      id="emailText"
-      rows="6"
-      cols="60"
-      placeholder="Digite o texto do email aqui..."
-    ></textarea>
-  </div>
+  <main class="home-container">
+    <section class="home-card">
+      <h1 class="home-title">Classificador de Emails</h1>
+      <p class="home-subtitle">
+        Cole o texto do email ou envie um arquivo (PDF/TXT) para classificação automática.
+      </p>
 
-  <br />
+      <div class="home-field">
+        <label for="emailText">Texto do email</label>
+        <textarea
+          id="emailText"
+          placeholder="Cole aqui o conteúdo do email..."
+        ></textarea>
+      </div>
 
-  <!-- Upload de PDF -->
-  <div>
-    <label for="pdfFile">Ou envie um PDF:</label><br />
-    <input type="file" id="pdfFile" accept=".pdf,.txt,application/pdf,text/plain" />
-  </div>
+      <div class="divider">ou</div>
 
-  <br />
+      <div class="home-field">
+        <label for="pdfFile">Arquivo (PDF ou TXT)</label>
+        <input type="file" id="pdfFile" accept=".pdf,.txt" />
+      </div>
 
-  <!-- Botão -->
-  <button id="submitBtn">Enviar para classificação</button>
+      <button id="submitBtn" class="home-button">Classificar Email</button>
 
-  <hr />
+      <div class="home-result">
+        <h3>Resultado</h3>
+        <pre id="result">Aguardando análise...</pre>
+      </div>
+    </section>
+  </main>
 
-  <!-- Resultado -->
-  <h3>Resultado:</h3>
-  <pre id="result"></pre>
+  <div id="footer"></div>
 
-  <!-- IMPORTANTE -->
   <script src="script.js" defer></script>
+
+  <script>
+    fetch("components/header/header.html")
+      .then(res => res.text())
+      .then(html => document.getElementById("header").innerHTML = html);
+
+    fetch("components/footer/footer.html")
+      .then(res => res.text())
+      .then(html => document.getElementById("footer").innerHTML = html);
+  </script>
 
 </body>
 </html>
