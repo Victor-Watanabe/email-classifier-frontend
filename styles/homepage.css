@@ -301,3 +301,44 @@ body.dark .reply-box span,
 body.dark .reply-box strong {
   color: #ffffff !important;
 }
+
+/* =========================
+   RESPONSIVO - MOBILE (ALTURA)
+========================= */
+@media (max-width: 768px) {
+  /* Card principal ocupa quase a altura da tela */
+  .card {
+    min-height: 90vh; /* ocupa quase toda a altura da tela */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* centraliza o conteúdo verticalmente */
+    padding: 24px 18px;
+    margin: 0 10px;
+  }
+
+  /* Garante que o conteúdo não estoure a tela */
+  .card > * {
+    max-width: 100%;
+  }
+
+  /* Cards de features ficam um abaixo do outro */
+  .features-container {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .feature-card {
+    padding: 22px 18px;
+  }
+
+  /* Ajuste geral de espaçamento */
+  .page-wrapper {
+    padding: 20px 10px 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    background: red !important;
+  }
+}

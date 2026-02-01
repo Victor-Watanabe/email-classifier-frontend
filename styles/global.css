@@ -5,7 +5,7 @@
 }
 
 :root {
-  --primary: #f97316; /* LARANJA PRINCIPAL */
+  --primary: #f97316;
   --bg: #fffffff3;
   --text: #0f172a;
   --muted: #64748b;
@@ -26,4 +26,11 @@ button {
   font-family: inherit;
   cursor: pointer;
   border: none;
+}
+
+/* ===== MOBILE GLOBAL ===== */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
 }
