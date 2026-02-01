@@ -80,3 +80,40 @@ submitBtn.addEventListener("click", async () => {
     submitBtn.textContent = "Classificar Email";
   }
 });
+
+// ============================
+// DARK MODE TOGGLE
+// ============================
+
+const themeToggle = document.getElementById("themeToggle");
+
+if (themeToggle) {
+  // Recupera preferência salva
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "dark") {
+    document.body.classList.add("dark");
+    themeToggle.textContent = "☀️";
+  }
+
+  themeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+
+    const isDark = document.body.classList.contains("dark");
+    themeToggle.textContent = isDark ? "☀️" : "🌙";
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+  });
+}
+
+const fileNameLabel = document.getElementById("fileName");
+const uploadText = document.getElementById("uploadText");
+
+pdfFileInput.addEventListener("change", () => {
+  if (pdfFileInput.files.length > 0) {
+    fileNameLabel.textContent = pdfFileInput.files[0].name;
+    uploadText.textContent = "Arquivo selecionado:";
+  } else {
+    fileNameLabel.textContent = "Nenhum arquivo selecionado";
+    uploadText.textContent =
+      "Clique Aqui para Selecionar o seu Arquivo e Anexar.";
+  }
+});
